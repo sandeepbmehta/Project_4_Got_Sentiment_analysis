@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game of Thrones</title>
+    
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css">
+
+    <!-- css files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="navbar navbar-header" style="text-align: center">
+        <h1>Game of Thrones!</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-2 col-md-6">
+          <!-- <h2>Click on the Character to know more</h2> -->
+            <ul>
+              <li>
+                <a onclick="getData(event)" char_name="Arya Stark" href="#">Arya Stark</a>
+              </li>
+              <li>
+                <a onclick="getData(event)" char_name="Bran Stark" href="#">Bran Stark</a>
+              </li>
+              <li>
+                <a onclick="getData(event)" char_name="Brienne of Tarth" href="#">Brienne of Tarth</a>
+              </li>
+              <li>
+                <a onclick="getData(event)" char_name="Cersei Lannister" href="#">Cersei Lannister</a>
+              </li>
+              <li>
+                <a onclick="getData(event)" char_name="Euron Greyjoy" href="#">Euron Greyjoy</a>
+              </li>
+              <li>
+                <a onclick="getData(event)" char_name="Jaime Lannister" href="#">Jaime Lannister</a>
+              </li>
+              <li>
+                <a onclick="getData(event)" char_name="Jon Snow" href="#">Jon Snow</a>
+              </li>
+              <li>
+                <a onclick="getData(event)" char_name="Daenerys Targaryen" href="#">Daenerys Targaryen</a>
+              </li>
+              <li>
+                <a onclick="getData(event)" char_name="Missandei" href="#">Missandei</a>
+              </li>
+              <li>
+                <a onclick="getData(event)" char_name="Sansa Stark" href="#">Sansa Stark</a>
+              </li>
+              <li>
+                <a onclick="getData(event)" char_name="Sandor Clegane (“The Hound”)" href="#">Sandor Clegane (“The Hound”)</a>
+              </li>
+              <li>
+                <a onclick="getData(event)" char_name="Theon Greyjoy" href="#">Theon Greyjoy</a>
+              </li>
+              <li>
+                <a onclick="getData(event)" char_name="Tyrion Lannister" href="#">Tyrion Lannister</a>
+              </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+              </br>
+              </br>
+              <!-- <img src = "" id="img" width=400px height=350px></img> -->
+              <img src="" id="img" padding=10px></img>
+            </div>
+            </br>
+            <!-- <div class="row">
+                <div id="graph" style="width: 400px; height: 350px;"></div>
+            </div> -->
+        </div>
+        <div class="row">
+          <div class="col-md-offset-4 col-md-10">
+          <div id="graph" style="width: 800px; height: 350px;"></div>
+          </div>
+        </div>
+      </div>
+      </br>
+    </div>
+    
+    <!-- <div id="map-id" style="height: 440px; border: 1px solid #AAA;"></div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+
+    <!-- Javascript -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+
+</html>
